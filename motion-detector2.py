@@ -1,12 +1,9 @@
 import cv2
 import numpy as np
 
-
 backSub = cv2.createBackgroundSubtractorMOG2()
 kernel = np.ones((3,3), np.uint8)
 cap = cv2.VideoCapture(0)
-
-
 
 while cap.isOpened():
     ret , frame = cap.read()
@@ -33,4 +30,5 @@ while cap.isOpened():
         break
 
 cv2.destroyAllWindows()
+
 cap.release()
